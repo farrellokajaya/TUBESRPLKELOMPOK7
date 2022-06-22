@@ -25,4 +25,6 @@ Route::post('/login',[LoginController::class, 'authenticate'])->name('authentica
 Route::get('/register',[RegisterController::class, 'register'])->name('register');
 Route::post('/register',[RegisterController::class, 'store'])->name('store');
 
-Route::get('/dashboard',[DashboardController::class, 'dashboard'])->name('dashboard');
+Route::get('/dashboard', function(){
+    return view('dashboard');
+});
