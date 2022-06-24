@@ -16,7 +16,7 @@ use App\Http\Controllers\DashboardController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 
 Route::get('/login',[LoginController::class, 'login'])->name('login')-> middleware('guest');
@@ -28,3 +28,15 @@ Route::post('/register',[RegisterController::class, 'store'])->name('store');
 Route::get('/dashboard', function(){
     return view('dashboard');
 });
+
+Route::get('/pendaftaran',[DashboardController::class, 'pendaftaran'])->name('pendaftaran');
+Route::post('/pendaftaran',[DashboardController::class, 'store'])->name('store');
+
+Route::get('/perpanjang',[DashboardController::class, 'perpanjang'])->name('perpanjang');
+Route::post('/perpanjang',[DashboardController::class, 'store_perpanjang'])->name('store_perpanjang');
+
+Route::get('/inputnilai',[DashboardController::class, 'inputnilai'])->name('inputnilai');
+Route::post('/inputnilai',[DashboardController::class, 'store_inputnilai'])->name('store_inputnilai');
+
+Route::get('/cekhasil',[DashboardController::class, 'cekhasil'])->name('cekhasil');
+Route::post('/inputnilai',[DashboardController::class, 'store_inputnilai'])->name('store_inputnilai');

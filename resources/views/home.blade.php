@@ -6,9 +6,9 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.98.0">
-    <title>Signin Template · Bootstrap v5.2</title>
+    <title>Heroes · Bootstrap v5.2</title>
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/sign-in/">
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/heroes/">
 
     
 
@@ -81,49 +81,32 @@
 
     
     <!-- Custom styles for this template -->
-    <link href="{{asset('front/signin.css')}}" rel="stylesheet">
+    <link href="{{asset('front/heroes.css')}}" rel="stylesheet">
   </head>
-  <body class="text-center"> 
-    <main class="form-signin w-100 m-auto">
-
-      @if(session()->has('sucess'))
-        <div class="alert alert-success alert-dismissible fade show" role="alert">
-          {{ session('sucess') }}
-          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-        </div>
-      @endif
-
-      @if(session()->has('loginError'))
-        <div class="alert alert-danger alert-dismissible fade show" role="alert">
-          {{ session('loginError') }}
-          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-        </div>
-      @endif
-
-      <h1 class="h3 mb-3 fw-normal">Pelayanan SIM Online</h1>
-      <form action="/login" method="post">
-        @csrf
-        <div class="form-floating">
-          <input type="email" name="email" class="form-control @error('email') is-invalid @enderror" id="email" placeholder="name@example.com" autofocus required value="{{ old ('email') }}">
-          <label for="email">Email address</label>
-          @error('email')
-            <div class="invalid-feedback">
-            {{ $message }}
-          </div>
-          @enderror
-        </div>
-
-        <div class="form-floating">
-          <input type="password" name="password" class="form-control" id="password" placeholder="Password" required>
-          <label for="password">Password</label>
-        </div>
-
-        <button class="w-100 btn btn-lg btn-primary mt-3" type="submit">Login</button>
-      </form>
-  <small class>Belom Registrasi? <a href="/register">Registrasi Sekarang</a></small>
-</main>
-
-
+  <body>
     
+        <main>
+
+        <div class="container col-xxl-8 px-4 py-5">
+            <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+            <div class="col-10 col-sm-8 col-lg-6">
+                <img src="{{asset('front/home.jpg')}}" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+            </div>
+            <div class="col-lg-6">
+                <h1 class="display-5 fw-bold lh-1 mb-3">Pelayanan SIM ONLINE</h1>
+                <p class="lead"><p>Mohon Login Untuk Bisa Menggunakan Fitur Pelayanan SIM Online</p>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                <a type="button" href="/login" class="btn btn-primary btn-lg px-4 me-md-2">LOGIN</a>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        </main>
+
+
+    <script src="{{asset('front/js/bootstrap.bundle.min.js')}}" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+      
   </body>
 </html>

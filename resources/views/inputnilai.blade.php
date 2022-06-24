@@ -6,9 +6,9 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.98.0">
-    <title>Signin Template · Bootstrap v5.2</title>
+    <title>Checkout example · Bootstrap v5.2</title>
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/sign-in/">
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/checkout/">
 
     
 
@@ -27,6 +27,9 @@
 
 
     <style>
+      body {
+        background-color: lightgoldenrodyellow;
+      }
       .bd-placeholder-img {
         font-size: 1.125rem;
         text-anchor: middle;
@@ -77,53 +80,43 @@
         white-space: nowrap;
         -webkit-overflow-scrolling: touch;
       }
+
     </style>
 
     
     <!-- Custom styles for this template -->
-    <link href="{{asset('front/signin.css')}}" rel="stylesheet">
+    <link href="{{asset('form-validation.css')}}" rel="stylesheet">
   </head>
-  <body class="text-center"> 
-    <main class="form-signin w-100 m-auto">
-
-      @if(session()->has('sucess'))
-        <div class="alert alert-success alert-dismissible fade show" role="alert">
-          {{ session('sucess') }}
-          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-        </div>
-      @endif
-
-      @if(session()->has('loginError'))
-        <div class="alert alert-danger alert-dismissible fade show" role="alert">
-          {{ session('loginError') }}
-          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-        </div>
-      @endif
-
-      <h1 class="h3 mb-3 fw-normal">Pelayanan SIM Online</h1>
-      <form action="/login" method="post">
-        @csrf
-        <div class="form-floating">
-          <input type="email" name="email" class="form-control @error('email') is-invalid @enderror" id="email" placeholder="name@example.com" autofocus required value="{{ old ('email') }}">
-          <label for="email">Email address</label>
-          @error('email')
-            <div class="invalid-feedback">
-            {{ $message }}
-          </div>
-          @enderror
-        </div>
-
-        <div class="form-floating">
-          <input type="password" name="password" class="form-control" id="password" placeholder="Password" required>
-          <label for="password">Password</label>
-        </div>
-
-        <button class="w-100 btn btn-lg btn-primary mt-3" type="submit">Login</button>
-      </form>
-  <small class>Belom Registrasi? <a href="/register">Registrasi Sekarang</a></small>
-</main>
-
-
+  <body>
     
+<div class="container">
+  <main>
+    <div class="py-5 text-center">
+      <h2>Perpanjangan SIM</h2>
+    </div>
+    <div class="col-md-7 col-lg-8">
+    <form  action="/inputnilai" method="post">
+      @csrf
+      <div class="form-group">
+            <label for="Nilai_Ujian_Tulis">Nilai Ujian Tulis</label>
+            <input type="text" class="form-control" name="Nilai_Ujian_Tulis" id="Nilai_Ujian_Tulis" placeholder="Masukan NIlai Ujian Tulis Anda">
+          </div>
+          <div class="form-group">
+            <label for="Nilai_Ujian_Praktek">Nilai Ujian Praktek</label>
+            <input type="text" class="form-control" name="Nilai_Ujian_Praktek" id="Nilai_Ujian_Praktek" placeholder="Masukan NIlai Ujian Praktek Anda">
+          </div>
+          <a href="/dashboard">
+            <button class="w-100 btn btn-primary btn-lg" type="submit">Submit</button>
+          </a>
+      </form>
+      </div>
+    </div>
+  </main>
+</div>
+
+
+    <script src="{{asset('front/js/bootstrap.bundle.min.js')}}" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+      <script src="{{asset('front/js/form-validation.js')}}"></script>
   </body>
 </html>

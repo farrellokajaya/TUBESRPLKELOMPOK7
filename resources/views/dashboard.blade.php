@@ -14,6 +14,46 @@
 <link href="{{asset('front/css/bootstrap.min.css')}}" rel="stylesheet">
 
     <style>
+    .button-40 {
+      background-color: #111827;
+      border: 1px solid transparent;
+      border-radius: .75rem;
+      box-sizing: border-box;
+      color: #FFFFFF;
+      cursor: pointer;
+      flex: 0 0 auto;
+      font-family: "Inter var",ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+      font-size: 1.125rem;
+      font-weight: 600;
+      line-height: 1.5rem;
+      padding: .75rem 1.2rem;
+      text-align: center;
+      text-decoration: none #6B7280 solid;
+      text-decoration-thickness: auto;
+      transition-duration: .2s;
+      transition-property: background-color,border-color,color,fill,stroke;
+      transition-timing-function: cubic-bezier(.4, 0, 0.2, 1);
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: manipulation;
+      width: auto;
+    }
+
+    .button-40:hover {
+      background-color: #374151;
+    }
+
+    .button-40:focus {
+      box-shadow: none;
+      outline: 2px solid transparent;
+      outline-offset: 2px;
+    }
+
+    @media (min-width: 768px) {
+      .button-40 {
+        padding: .75rem 1.5rem;
+      }
+    }
       .bd-placeholder-img {
         font-size: 1.125rem;
         text-anchor: middle;
@@ -26,14 +66,6 @@
         .bd-placeholder-img-lg {
           font-size: 3.5rem;
         }
-      }
-
-      .b-example-divider {
-        height: 3rem;
-        background-color: rgba(0, 0, 0, .1);
-        border: solid rgba(0, 0, 0, .15);
-        border-width: 1px 0;
-        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
       }
 
       .b-example-vr {
@@ -53,17 +85,6 @@
         height: 2.75rem;
         overflow-y: hidden;
       }
-
-      .nav-scroller .nav {
-        display: flex;
-        flex-wrap: nowrap;
-        padding-bottom: 1rem;
-        margin-top: -1px;
-        overflow-x: auto;
-        text-align: center;
-        white-space: nowrap;
-        -webkit-overflow-scrolling: touch;
-      }
     </style>
 
     
@@ -82,23 +103,27 @@
 </nav>
 
 <main class="container">
-  <div class="bg-light p-5 rounded">
     <h1>Silahkan Pilih Jenis Layanan Yang Dibutuhkan</h1>
-    <a class="btn btn-lg btn-primary" href="../components/navbar/" role="button">Pendaftaran SIM Baru &raquo;</a>
+    <a href="/pendaftaran">
+    <button class="button-40" role="button">Pendaftaran SIM Baru</button>
+    </a>
     <p></p>
-    <a class="btn btn-lg btn-primary" href="../components/navbar/" role="button">Perpanjang SIM &raquo;</a>
+    <a href="/perpanjang">
+    <button class="button-40" role="button">Perpanjang SIM</button>
+    </a>
     <p></p>
-    <a class="btn btn-lg btn-primary" href="../components/navbar/" role="button">Memilih Lokasi Ujian &raquo;</a>
+    <a href="/inputnilai">
+    <button class="button-40" role="button">Input Nilai Ujian dan Nilai Praktek</button>
+    </a>
     <p></p>
-    <a class="btn btn-lg btn-primary" href="../components/navbar/" role="button">Pengambilan SIM &raquo;</a>
+    <a href="/cekhasil">
+    <button class="button-40" role="button">Cek Hasil Kelulusan</button>
+    </a>
     <p></p>
-    <a class="btn btn-lg btn-primary" href="../components/navbar/" role="button">Memilih Lokasi Ujian &raquo;</a>
-    <p></p>
-    <a class="btn btn-lg btn-primary" href="../components/navbar/" role="button">Cek Hasil Kelulusan &raquo;</a>
-    <p></p>
-    <a class="btn btn-lg btn-primary" href="../components/navbar/" role="button">Input Nilai Ujian dan Nilai Praktek &raquo;</a>
-  </div>
-</main>
+    <a href="">
+    <button class="button-40" role="button">Lokasi Pengambilan SIM</button>
+    </a>
+
 
 
     <script src="{{asset('front/js/bootstrap.bundle.min.js')}}"></script>

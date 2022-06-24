@@ -129,9 +129,9 @@
       @enderror
     </div>
 
-    <button class="w-100 btn btn-lg btn-primary mt-4" type="submit">Register</button>
+    <button class="w-100 btn btn-lg btn-primary mt-4" type="submit">Registrasi</button>
   </form>
-  <small class>Already register? <a href="/login">Login</a></small>
+  <small class>Sudah Registrasi ? <a href="/login">Login</a></small>
 </main>
 
 
