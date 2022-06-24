@@ -64,4 +64,16 @@ class DashboardController extends Controller
         return redirect("/dashboard");
 
     }
+
+    public function store_ceklulus($InputNilai){
+        if ($request->Nilai_UjianTulis >= 75 && $request->Nilai_UjianTulis >= 75 ) {
+            return redirect("/lulus");
+        } else {
+            return redirect("/tidaklulus");
+        }
+    }
+
+    public function pengambilan(){
+        return view ('pengambilan');
+    }
 }

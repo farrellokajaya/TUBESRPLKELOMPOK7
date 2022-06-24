@@ -39,4 +39,6 @@ Route::get('/inputnilai',[DashboardController::class, 'inputnilai'])->name('inpu
 Route::post('/inputnilai',[DashboardController::class, 'store_inputnilai'])->name('store_inputnilai');
 
 Route::get('/cekhasil',[DashboardController::class, 'cekhasil'])->name('cekhasil');
-Route::post('/inputnilai',[DashboardController::class, 'store_inputnilai'])->name('store_inputnilai');
+Route::post('/cekhasil',[DashboardController::class, 'store_inputnilai'])->name('store_inputnilai');
+
+Route::get('/pengambilan',[DashboardController::class, 'pengambilan'])->name('pengambilan');

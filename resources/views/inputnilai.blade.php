@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.98.0">
-    <title>Checkout example · Bootstrap v5.2</title>
+    <title>INPUT NILAI | PELAYANAN SIM ONLINE </title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/checkout/">
 
@@ -92,7 +92,7 @@
 <div class="container">
   <main>
     <div class="py-5 text-center">
-      <h2>Perpanjangan SIM</h2>
+      <h2>Input Nilai Ujian Tulis Dan Ujian Praktek </h2>
     </div>
     <div class="col-md-7 col-lg-8">
     <form  action="/inputnilai" method="post">
@@ -105,8 +105,8 @@
             <label for="Nilai_Ujian_Praktek">Nilai Ujian Praktek</label>
             <input type="text" class="form-control" name="Nilai_Ujian_Praktek" id="Nilai_Ujian_Praktek" placeholder="Masukan NIlai Ujian Praktek Anda">
           </div>
-          <a href="/dashboard">
-            <button class="w-100 btn btn-primary btn-lg" type="submit">Submit</button>
+          <a href="/hasilkelulusan5">
+            <button class="w-100 btn btn-primary btn-lg" type="submit">Cek Hasil Kelulusan</button>
           </a>
       </form>
       </div>

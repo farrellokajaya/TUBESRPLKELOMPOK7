@@ -113,14 +113,14 @@
     </a>
     <p></p>
     <a href="/inputnilai">
-    <button class="button-40" role="button">Input Nilai Ujian dan Nilai Praktek</button>
+    <button class="button-40" role="button">Input Nilai Ujian Tulis Dan Ujian Praktek</button>
     </a>
     <p></p>
     <a href="/cekhasil">
     <button class="button-40" role="button">Cek Hasil Kelulusan</button>
     </a>
     <p></p>
-    <a href="">
+    <a href="/pengambilan">
     <button class="button-40" role="button">Lokasi Pengambilan SIM</button>
     </a>
 
