@@ -9,6 +9,10 @@ use App\Models\InputNilai;
 
 class DashboardController extends Controller
 {
+    public function Dashboard(){
+        return view('Dashboard');
+    }
+
     public function pendaftaran(){
         return view('pendaftaran');
     }

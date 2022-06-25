@@ -19,26 +19,26 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/login',[LoginController::class, 'login'])->name('login')-> middleware('guest');
+Route::post('/logout',[LoginController::class, 'logout'])->name('logout');
+
+Route::get('/login',[LoginController::class, 'login'])->name('login');
 Route::post('/login',[LoginController::class, 'authenticate'])->name('authenticate');
 
 Route::get('/register',[RegisterController::class, 'register'])->name('register');
 Route::post('/register',[RegisterController::class, 'store'])->name('store');
 
-Route::get('/dashboard', function(){
-    return view('dashboard');
-});
+Route::get('/dashboard',[DashboardController::class, 'Dashboard'])->middleware('auth');
 
-Route::get('/pendaftaran',[DashboardController::class, 'pendaftaran'])->name('pendaftaran');
+Route::get('/pendaftaran',[DashboardController::class, 'pendaftaran'])->name('pendaftaran')->middleware('auth');
 Route::post('/pendaftaran',[DashboardController::class, 'store'])->name('store');
 
-Route::get('/perpanjang',[DashboardController::class, 'perpanjang'])->name('perpanjang');
+Route::get('/perpanjang',[DashboardController::class, 'perpanjang'])->name('perpanjang')->middleware('auth');
 Route::post('/perpanjang',[DashboardController::class, 'store_perpanjang'])->name('store_perpanjang');
 
-Route::get('/inputnilai',[DashboardController::class, 'inputnilai'])->name('inputnilai');
+Route::get('/inputnilai',[DashboardController::class, 'inputnilai'])->name('inputnilai')->middleware('auth');
 Route::post('/inputnilai',[DashboardController::class, 'store_inputnilai'])->name('store_inputnilai');
 
-Route::get('/cekhasil',[DashboardController::class, 'cekhasil'])->name('cekhasil');
+Route::get('/cekhasil',[DashboardController::class, 'cekhasil'])->name('cekhasil')->middleware('auth');
 Route::post('/cekhasil',[DashboardController::class, 'store_inputnilai'])->name('store_inputnilai');
 
-Route::get('/pengambilan',[DashboardController::class, 'pengambilan'])->name('pengambilan');
+Route::get('/pengambilan',[DashboardController::class, 'pengambilan'])->name('pengambilan')->middleware('auth');;

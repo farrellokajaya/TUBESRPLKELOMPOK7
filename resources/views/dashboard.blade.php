@@ -85,49 +85,68 @@
         height: 2.75rem;
         overflow-y: hidden;
       }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+      -webkit-overflow-scrolling: touch;
+      }
+
     </style>
 
     
     <!-- Custom styles for this template -->
     <link href="{{asset('front/navbar-top-fixed.css')}}" rel="stylesheet">
   </head>
-  <body>
-    
-<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Pelayanan SIM Online</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-  </div>
-</nav>
 
-<main class="container">
-    <h1>Silahkan Pilih Jenis Layanan Yang Dibutuhkan</h1>
-    <a href="/pendaftaran">
-    <button class="button-40" role="button">Pendaftaran SIM Baru</button>
-    </a>
-    <p></p>
-    <a href="/perpanjang">
-    <button class="button-40" role="button">Perpanjang SIM</button>
-    </a>
-    <p></p>
-    <a href="/inputnilai">
-    <button class="button-40" role="button">Input Nilai Ujian Tulis Dan Ujian Praktek</button>
-    </a>
-    <p></p>
-    <a href="/cekhasil">
-    <button class="button-40" role="button">Cek Hasil Kelulusan</button>
-    </a>
-    <p></p>
-    <a href="/pengambilan">
-    <button class="button-40" role="button">Lokasi Pengambilan SIM</button>
-    </a>
+  
+    <body>  
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Pelayanan SIM Online</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="navbar-nav">
+            <div class="nav-item text-nowrap">
+              <form action="/logout" method="post">
+                @csrf
+                  <div class="contrainer-fluid">
+                    <button class="nav-item text-nowrap"><i class="av-item text-nowrap"></i>Sign out</button>
+                  </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+        <main class="container">
+            <h1>Silahkan Pilih Jenis Layanan Yang Dibutuhkan</h1>
+            <a href="/pendaftaran">
+            <button class="button-40" role="button">Pendaftaran SIM Baru</button>
+            </a>
+            <p></p>
+            <a href="/perpanjang">
+            <button class="button-40" role="button">Perpanjang SIM</button>
+            </a>
+            <p></p>
+            <a href="/inputnilai">
+            <button class="button-40" role="button">Input Nilai Ujian Tulis Dan Ujian Praktek</button>
+            </a>
+            <p></p>
+            <a href="/pengambilan">
+            <button class="button-40" role="button">Lokasi Pengambilan SIM</button>
+            </a>
 
 
 
-    <script src="{{asset('front/js/bootstrap.bundle.min.js')}}"></script>
+            <script src="{{asset('front/js/bootstrap.bundle.min.js')}}"></script>
 
-      
-  </body>
+              
+    </body>
 </html>

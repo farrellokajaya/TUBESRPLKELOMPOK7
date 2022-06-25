@@ -106,7 +106,7 @@
             <input type="text" class="form-control" name="Nilai_Ujian_Praktek" id="Nilai_Ujian_Praktek" placeholder="Masukan NIlai Ujian Praktek Anda">
           </div>
           <a href="/hasilkelulusan5">
-            <button class="w-100 btn btn-primary btn-lg" type="submit">Cek Hasil Kelulusan</button>
+            <button class="w-100 btn btn-primary btn-lg" type="submit">Submit</button>
           </a>
       </form>
       </div>
